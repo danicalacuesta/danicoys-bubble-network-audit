@@ -2,14 +2,12 @@
 
 A local sandbox for **network design and security auditing**. It pairs a three-tier network defined as code with a standalone Python auditor that scans firewall rules for dangerous configurations such as SSH or RDP open to the public internet.
 
-Everything runs on a laptop. No cloud account, subscription, or live infrastructure is required. All rule data is fictional.
-
-## Why this project exists
+## Objective
 
 Misconfigured firewall rules are one of the most common and most preventable causes of security incidents. This project practices two core cloud operations skills:
 
 1. **Designing** a segmented network with least-privilege access between tiers.
-2. **Auditing** firewall rule sets automatically, so violations are caught by a script instead of by eye.
+2. **Auditing** firewall rule sets automatically, so violations are caught by a script.
 
 ## Architecture
 
@@ -62,13 +60,6 @@ danicoys-bubble/
 ```
 
 ## Local setup
-
-### Prerequisites
-
-| Tool | Version | Needed for |
-|------|---------|------------|
-| Python | 3.9 or newer | Running the audit (required) |
-| Terraform | 1.5 or newer | Validating `network.tf` (optional) |
 
 ### 1. Get the project
 
