@@ -56,7 +56,7 @@ The database tier is protected by a network security group (NSG) that follows a 
 ```
 danicoys-bubble/
 ├── network.tf            # Terraform definition of the VNet, subnets, and NSG
-├── firewall_rules.json   # Mock rule export with compliant and non-compliant rules
+├── firewall_rules.json   # Mock rule export with compliant and non-compliant rules for application 
 ├── audit_nsg.py          # Standalone auditor (Python standard library only)
 └── README.md
 ```
@@ -124,7 +124,7 @@ The auditor reads each rule, normalizes it, and applies a small set of policies.
 
 HTTPS (443) from the internet is treated as compliant, as are rules scoped to specific internal subnets.
 
-## Sample output
+## First Sample Output
 
 Output from `python audit_nsg.py --no-color` against the included dataset:
 
@@ -218,7 +218,6 @@ Output from `python audit_nsg.py --no-color` against the included dataset:
 - The auditor evaluates rules individually and does not simulate full rule-order precedence between allow and deny rules.
 - Only inbound rules are checked.
 - The rule schema is a simplified model and may need adapting for other export formats.
-- This is a learning project, not a replacement for a production compliance scanner.
 
 ## Skills demonstrated
 
